@@ -1,0 +1,1 @@
+{"hour":"21","day":"\uc624\ub298","temp":"14.7","pty":"\uc5c6\uc74c","wfkor":"\uad6c\ub984 \ub9ce\uc74c","pop":"19"}

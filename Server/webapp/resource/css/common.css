@@ -1,0 +1,335 @@
+/* 0. Default Settings */
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* 1. Main Page Settings */
+.main-wrapper {
+  margin: 0;
+  position: relative;
+  top: 5%;
+}
+
+
+/* 2. Home Page Settings */
+/* Toggle Styles */
+#wrapper {
+  padding-left: 0;
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 300px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 300px;
+  width: 0;
+  height: 100%;
+  margin-left: -300px;
+  overflow-x: hidden;
+  background: #212121;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper.container {
+  padding: 0;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 300px;
+}
+
+#main-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #main-content-wrapper {
+  position: absolute;
+  margin-right: -300px;
+}
+
+/* Sidebar Style */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  color: #bdbdbd;
+}
+.sidebar-nav > li {
+    text-indent: 20px;
+    line-height: 200%;
+    margin: 0;
+    border-bottom: 1px solid #757575;
+}
+.sidebar-nav li a {
+    position: relative;
+    display: block;
+    color: #999999;
+}
+.sidebar-nav li a:hover,
+.sidebar-nav .active a {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+.sidebar-nav .sidebar-close {
+  position:absolute;
+  right: 0;
+  padding: 10px 15px 0;
+  font-size: 18px;
+}
+.sidebar-nav .sidebar-close:hover {
+  color: #ffffff;
+}
+.sidebar-nav .sidebar-profile {
+  line-height: 160px;
+  vertical-align: top;
+}
+.sidebar-nav .sidebar-profile ul {
+  padding: 0;
+}
+.sidebar-nav .sidebar-profile ul li .sidebar-profile-name {
+  margin-top: -7px;
+  height: 42px;
+  border-bottom: 1px solid #757575;
+}
+
+
+.sidebar-nav .glyphicon {
+  float: left;
+  margin: 5px 0 0 -5px;
+}
+.sidebar-nav .sidebar-home-manage {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-nav .sidebar-home-manage li {
+  margin: 5px;
+}
+.sidebar-nav .sidebar-home-manage li span {
+  margin: 0 14px 0 30px;
+}
+.sidebar-nav .sidebar-home-manage li span.glyphicon-temperature,
+.sidebar-nav .sidebar-home-manage li span.glyphicon-gas {
+  margin-left: 28px;
+}
+.sidebar-nav .sidebar-home-manage li span.glyphicon-tint,
+.sidebar-nav .sidebar-home-manage li span.glyphicon-globe {
+  margin-top: 3px;
+}
+.sidebar-nav .sidebar-home-manage li span.glyphicon-gas {
+  margin-top: -2px;
+}
+.sidebar-nav .glyphicon-temperature img {
+  -webkit-filter: invert(75%);
+  filter: invert(75%);
+}
+.sidebar-nav .glyphicon-gas img {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.sidebar-nav .glyphicon-bus img {
+  -webkit-filter: invert(75%);
+  filter: invert(75%);
+  margin: -5px -2px 0 0;
+}
+
+
+/* Top Navbar */
+.top-navbar-wrapper {
+  position: absolute;
+  top: 42px;
+  margin-left: -14px;
+}
+.nav-tabs a {
+  padding: 30px;
+}
+#content-wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+/* Titlebar */
+.titlebar-wrapper {
+  position: fixed;
+  width: 100%;
+  background-color: #212121;
+  border: 1px solid #757575;
+  z-index: 1001;
+}
+.titlebar-nav .glyphicon-menu-hamburger {
+  font-size: 24px;
+  color: #e0e0e0;
+  padding: 8px;
+  float: left;
+  border-right: 1px solid #757575;
+}
+.titlebar-nav .glyphicon-menu-hamburger:hover,
+.titlebar-nav .glyphicon-option-vertical:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, .2);
+}
+.titlebar-nav .current-content-name {
+  position: relative;
+  top: 5px;
+  left: 12px;
+  font-size: 20px;
+  color: #e0e0e0;
+}
+.titlebar-nav .glyphicon-option-vertical {
+  font-size: 24px;
+  color: #e0e0e0;
+  padding: 8px;
+  float: right;
+  border-left: 1px solid #757575;
+}
+
+/* Main Content */
+#main-content-wrapper {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Responsive Slider */
+.responsive-slider {
+  width: 100%;
+  position: relative;
+}
+.responsive-slider [data-animate] {
+  opacity: 0;
+}
+.responsive-slider .slides {
+  position: relative;
+  overflow: hidden;
+
+}
+.responsive-slider .slides ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 0;
+}
+.responsive-slider .slides ul li {
+  display: inline-block;
+  max-width: 100%;
+}
+.responsive-slider .slides ul li .slide-body {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-size: 14px;
+}
+.responsive-slider .slides ul li .slide-body img {
+  width: 100%;
+  height: 0px;
+}
+.responsive-slider .move-button {
+  display: none;
+}
+
+/* Responsive Slider Content */
+.responsive-slider .slides ul li .slide-body .home-manage,
+.responsive-slider .slides ul li .slide-body .bus-arrival-info,
+.responsive-slider .slides ul li .slide-body .weather-info,
+.responsive-slider .slides ul li .slide-body .update-profile {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* 집 관리 */
+.home-manage .col-sm-6 {
+  border: 1px solid #9E9E9E;
+  margin-bottom: 5px;
+}
+.hardware-wrapper h5 {
+  font-weight: bold;
+}
+.hardware-wrapper .pi-wrapper,
+.hardware-wrapper .arduino-wrapper {
+  margin-bottom: 48px;
+}
+.hardware-wrapper .btn-hardware {
+  margin-bottom: 10px;
+}
+.modal-hardware .lbl-radius {
+  float: left;
+}
+
+
+/* 버스 도착정보 */
+.bus-arrival-info .bus-info-header {
+  background-color: #E0E0E0;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.bus-arrival-info .bus-info-header:hover {
+  opacity: 0.8;
+}
+.bus-arrival-info .bus-info-header p {
+  float: left;
+  margin: 2px 2px 2px 8px;
+  font-weight: bold
+}
+.bus-arrival-info .bus-info-header .glyphicon {
+  float: right;
+  margin: 6px 11px 6px 6px;
+}
+
+
+/* 날씨정보 */
+.weather-info .weather-info-wrapper {
+  padding: 0 5px 0 5px;
+}
+.weather-info .weather-info-graph {
+  border: 1px solid #9E9E9E;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+
+/* 정보 수정 */
+
+
+
+
+
+
+
+
+/* End */

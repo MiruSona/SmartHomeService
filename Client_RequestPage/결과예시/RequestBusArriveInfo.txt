@@ -1,0 +1,1 @@
+{"delayYn1":"N","delayYn2":"N","drvEnd":"N","flag":"PASS","locationNo1":"8","locationNo2":"15","lowPlate1":"1","lowPlate2":"0","plateNo1":"\uc11c\uc6b870\uc0ac6517","plateNo2":"\uc11c\uc6b870\uc0ac6438","predictTime1":"16","predictTime2":"32","remainSeatCnt1":"-1","remainSeatCnt2":"-1","routeId":"100100052","staOrder":"94","stationId":"204000111"}
